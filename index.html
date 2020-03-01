@@ -10,6 +10,10 @@
     <link type="text/css" href="/css/styles.css" rel="stylesheet">
     <script type="text/javascript" src="/js/materialize.min.js"></script>
     <link rel="manifest" href="/manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700"> 
+    <meta name="theme-color" content="#FFE1C4">
 </head>
 <body class="grey lighten-4">
     <!-- top nav -->
@@ -33,48 +37,9 @@
     </ul>
     <!-- recipes -->
     <div class="recipes container grey-text text-darken-1">
-        <div class="card-panel recipe white row">
-        <img src="/img/dish.png" alt="recipe thumb">
-        <div class="recipe-details">
-            <div class="recipe-title">Edame Noodles</div>
-            <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
-        </div>
-        <div class="recipe-delete">
-            <i class="material-icons">delete_outline</i>
-        </div>
-        </div>
-        <div class="card-panel recipe white row">
-        <img src="/img/dish.png" alt="recipe thumb">
-        <div class="recipe-details">
-            <div class="recipe-title">Edame Noodles</div>
-            <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
-        </div>
-        <div class="recipe-delete">
-            <i class="material-icons">delete_outline</i>
-        </div>
-        </div>
-        <div class="card-panel recipe white row">
-        <img src="/img/dish.png" alt="recipe thumb">
-        <div class="recipe-details">
-            <div class="recipe-title">Edame Noodles</div>
-            <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
-        </div>
-        <div class="recipe-delete">
-            <i class="material-icons">delete_outline</i>
-        </div>
-        </div>
-        <div class="card-panel recipe white row">
-        <img src="/img/dish.png" alt="recipe thumb">
-        <div class="recipe-details">
-            <div class="recipe-title">Edame Noodles</div>
-            <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
-        </div>
-        <div class="recipe-delete">
-            <i class="material-icons">delete_outline</i>
-        </div>
-        </div>
-    </div>
-
+        <h6 class="center">Ninjitsu Recipes</h6>
+      
+    </div>  
     <div class="center">
         <a class="btn-floating btn-small add-btn sidenav-trigger" data-target="side-form">
           <i class="material-icons">add</i>
@@ -99,8 +64,36 @@
             </div>
         </form>
     </div>
-    
-      <script src="/js/ui.js"></script>
-    
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAc8itie0aZ-5PaZnUhBhEV_Ggowg03s-c",
+            authDomain: "food-ninja-pwa-7a020.firebaseapp.com",
+            databaseURL: "https://food-ninja-pwa-7a020.firebaseio.com",
+            projectId: "food-ninja-pwa-7a020",
+            storageBucket: "food-ninja-pwa-7a020.appspot.com",
+            messagingSenderId: "168923794713",
+            appId: "1:168923794713:web:19c7e612337b842f858988",
+            measurementId: "G-L6VT20B2TY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();      
+        const db = firebase.firestore();
+    </script>
+    <script src="/js/app.js"></script>
+    <script src="/js/db.js"></script>
+    <script src="/js/ui.js"></script>
 </body>
 </html>
